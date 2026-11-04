@@ -1,10 +1,10 @@
 # Exercise Level 3 — Functions and Lists
 
-## 🎯 Goal
+##  Goal
 
 Practice functions (with parameters and return values), lists, and combining both to organize code properly.
 
-## 📝 Task — "Student Grade Manager"
+##  Task — "Student Grade Manager"
 
 Create a program called `grades.py` that manages a list of students and their grades. All logic must be inside functions — no long blocks of code at the top level.
 
@@ -49,7 +49,7 @@ At the bottom, write a small `main()` function that:
 
 Wrap everything in `if __name__ == "__main__": main()`
 
-## ✅ Base solution
+##  Base solution
 
 ```python
 def show_students(students):
@@ -73,10 +73,10 @@ def best_student(students):
 
 def add_student(students, name, grade):
     if grade < 0 or grade > 10:
-        print(f"Invalid grade for {name} ❌")
+        print(f"Invalid grade for {name} ")
         return
     students.append({"name": name, "grade": grade})
-    print(f"{name} added ✅")
+    print(f"{name} added ")
 
 def passed_students(students):
     return [s["name"] for s in students if s["grade"] >= 6]
@@ -101,14 +101,14 @@ if __name__ == "__main__":
     main()
 ```
 
-## 🚀 Extra challenges (pick one or more)
+##  Extra challenges (pick one or more)
 
 1. **Interactive menu:** replace `main()` with a `while True` menu that lets the user choose: show / add / average / best / passed / exit — reusing the same functions.
 2. **Sorting:** add a function `sort_by_grade(students)` that returns a new list sorted from highest to lowest (hint: `sorted(students, key=lambda s: s["grade"], reverse=True)`).
 3. **Save to file:** add `save_to_file(students, filename)` that writes each student to a `.txt` file, one per line (`Ana,8.5`).
 4. **Refactor:** rewrite `best_student` using `max()` with a lambda and check both versions give the same result.
 
-## 🧑‍💻 My solution (with extra challenges)
+##  My solution (with extra challenges)
 
 ```python
 # Exercise Level 3 --- Functions and Lists
